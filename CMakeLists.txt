@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.23)
+cmake_minimum_required(VERSION 3.22)
 project(OpenGLDemo)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -13,4 +13,10 @@ add_executable(OpenGLDemo
         glad.c)
 
 target_link_libraries(OpenGLDemo
+        glfw3)
+
+add_executable(triangle
+        triangle.cpp
+        glad.c)
+target_link_libraries(triangle
         glfw3)
